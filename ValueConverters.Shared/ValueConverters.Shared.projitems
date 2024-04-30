@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>4d17e49b-5e42-487e-b057-da0d8d364662</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>ValueConverters</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AssemblyConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BindableBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolInverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolNegationConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToBrushConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToObjectConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToDoubleConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToFontWeightConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToStyleConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToThicknessConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToValueConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToValueConverterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BoolToVisibilityConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ConverterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DateTimeOffsetConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DateTimeOffsetToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DateTimeToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IsInRangeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MinMaxValueToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ITimeZoneInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\SystemTimeZoneInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TimeSpanToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FirstOrDefaultConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GuidToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DoubleToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InverseBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)InvertedBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PreferredCulture.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ReversibleValueToBoolConverterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringCaseConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IntegerToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NullToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PropertyHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SingletonConverterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DateTimeConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DebugConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumToObjectConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumWrapperCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumWrapperConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumWrapperConverterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EnumWrapperConverterNameStyle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IsEmptyConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringIsNotNullOrEmptyConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringToObjectConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AddConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConvertersConfig.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueToEnumerableConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SubtractConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueConverterGroup.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueToBoolConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ValueToBoolConverterBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)StringToDecimalConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VersionToStringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Visibility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)VisibilityInverter.cs" />
+  </ItemGroup>
+</Project>

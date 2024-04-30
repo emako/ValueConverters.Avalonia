@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
+    <AssemblyName>ValueConverters.Avalonia</AssemblyName>
+    <PackageVersion>3.0.26.1</PackageVersion>
+    <AssemblyVersion>3.0.26.1</AssemblyVersion>
+    <FileVersion>3.0.26.1</FileVersion>
+    <Version>$(VersionPrefix)3.0.26.1</Version>
+    <LangVersion>latest</LangVersion>
+    <Title>ValueConverters.Avalonia</Title>
+    <Description>This library contains a collection of most commonly used implementations of the IValueConverter interface. ValueConverters are used to convert values bound from the view to the view model - and in some cases also backwards.</Description>
+    <PackageProjectUrl>https://github.com/emako/ValueConverters.Avalonia</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/emako/ValueConverters.Avalonia</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>ValueConverters.Avalonia</PackageTags>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageIcon>logo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\Images\logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+	<PropertyGroup>
+		<DefineConstants>$(DefineConstants);AVALONIA</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\net5.0-windows\ValueConverters.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AvaloniaVersion>11.0.10</AvaloniaVersion>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+  </ItemGroup>
+
+  <Import Project="..\ValueConverters.Shared\ValueConverters.Shared.projitems" Label="Shared" />
+
+</Project>
