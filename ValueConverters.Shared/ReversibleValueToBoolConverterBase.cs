@@ -15,7 +15,7 @@ public abstract class ReversibleValueToBoolConverterBase<T, TConverter> : ValueT
         set => this.SetValue(BaseOnFalseValueProperty, value);
     }
 
-    protected override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (!this.BaseOnFalseValue)
         {

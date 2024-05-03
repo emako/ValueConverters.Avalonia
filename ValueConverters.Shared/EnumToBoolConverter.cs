@@ -9,7 +9,7 @@ namespace ValueConverters;
 // Source: http://stackoverflow.com/questions/397556/how-to-bind-radiobuttons-to-an-enum
 public class EnumToBoolConverter : SingletonConverterBase<EnumToBoolConverter>
 {
-    protected override object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (parameter is string parameterString)
         {
