@@ -33,7 +33,7 @@ public class StringToDecimalConverter : SingletonConverterBase<StringToDecimalCo
         return UnsetValue;
     }
 
-    protected override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         return this.Convert(value, targetType, parameter, culture);
     }

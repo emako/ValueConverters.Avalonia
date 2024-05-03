@@ -64,7 +64,7 @@ public class DateTimeOffsetToStringConverter : SingletonConverterBase<DateTimeOf
         return UnsetValue;
     }
 
-    protected override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (value != null)
         {

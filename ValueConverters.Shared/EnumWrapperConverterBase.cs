@@ -58,7 +58,7 @@ public abstract class EnumWrapperConverterBase<TConverter> : SingletonConverterB
         return enumWrapper;
     }
 
-    protected override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (value == null)
         {

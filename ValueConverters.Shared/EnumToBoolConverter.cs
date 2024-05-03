@@ -26,7 +26,7 @@ public class EnumToBoolConverter : SingletonConverterBase<EnumToBoolConverter>
         return UnsetValue;
     }
 
-    protected override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (parameter is string parameterString)
         {

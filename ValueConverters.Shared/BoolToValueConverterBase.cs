@@ -37,7 +37,7 @@ public abstract class BoolToValueConverterBase<T, TConverter> : SingletonConvert
         return returnValue;
     }
 
-    protected override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         bool returnValue = false;
 

@@ -26,7 +26,7 @@ public abstract class ReversibleValueToBoolConverterBase<T, TConverter> : ValueT
         return !Equals(value, falseValue) ^ this.IsInverted;
     }
 
-    protected override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         return true.Equals(value) ^ this.IsInverted ? this.TrueValue : this.FalseValue;
     }
