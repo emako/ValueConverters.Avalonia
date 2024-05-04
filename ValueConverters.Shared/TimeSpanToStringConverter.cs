@@ -4,6 +4,8 @@ using Avalonia;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public class TimeSpanToStringConverter : SingletonConverterBase<TimeSpanToStringConverter>
 {
     protected const string DefaultFormat = @"g";
@@ -23,13 +25,13 @@ public class TimeSpanToStringConverter : SingletonConverterBase<TimeSpanToString
     /// </summary>
     public string Format
     {
-        get => (string)this.GetValue(FormatProperty);
+        get => (string)this.GetValue(FormatProperty)!;
         set => this.SetValue(FormatProperty, value);
     }
 
     public string MinValueString
     {
-        get => (string)this.GetValue(MinValueStringProperty);
+        get => (string)this.GetValue(MinValueStringProperty)!;
         set => this.SetValue(MinValueStringProperty, value);
     }
 

@@ -3,6 +3,8 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// EnumToObjectConverter can be used to select different resources based on given enum name.
 /// This can be particularly useful if an enum needs to represent an image on the user interface.

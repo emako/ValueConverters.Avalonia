@@ -5,6 +5,8 @@ using Avalonia.Data.Converters;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public abstract class ConverterBase : AvaloniaObject, IValueConverter
 {
     /// <summary>

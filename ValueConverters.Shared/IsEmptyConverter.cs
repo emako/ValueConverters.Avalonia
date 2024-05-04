@@ -5,6 +5,8 @@ using Avalonia;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public class IsEmptyConverter : SingletonConverterBase<IsEmptyConverter>
 {
     public static readonly AvaloniaProperty IsInvertedProperty = AvaloniaProperty.Register<IsEmptyConverter, bool>(
@@ -13,7 +15,7 @@ public class IsEmptyConverter : SingletonConverterBase<IsEmptyConverter>
 
     public bool IsInverted
     {
-        get => (bool)this.GetValue(IsInvertedProperty);
+        get => (bool)this.GetValue(IsInvertedProperty)!;
         set => this.SetValue(IsInvertedProperty, value);
     }
 

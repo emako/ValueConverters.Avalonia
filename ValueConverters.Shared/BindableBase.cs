@@ -5,9 +5,11 @@ using System.Runtime.CompilerServices;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public abstract class BindableBase : INotifyPropertyChanged
 {
-    public event PropertyChangedEventHandler PropertyChanged;
+    public event PropertyChangedEventHandler? PropertyChanged;
 
     protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
     {

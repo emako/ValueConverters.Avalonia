@@ -1,6 +1,11 @@
-﻿namespace ValueConverters;
+﻿using System;
 
-public class VisibilityInverter : BoolToValueConverter<Visibility>
+namespace ValueConverters;
+
+#pragma warning disable CS1591
+
+[Obsolete("Not supported for Avalonia")]
+public sealed class VisibilityInverter : BoolToValueConverter<Visibility>
 {
     public VisibilityInverter()
     {

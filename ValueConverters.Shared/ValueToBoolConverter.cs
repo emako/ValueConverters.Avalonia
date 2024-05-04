@@ -2,11 +2,13 @@
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public class ValueToBoolConverter<T> : ReversibleValueToBoolConverterBase<T, ValueToBoolConverter<T>>
 {
     public override T TrueValue
     {
-        get => (T)this.GetValue(TrueValueProperty);
+        get => (T)this.GetValue(TrueValueProperty)!;
         set => this.SetValue(TrueValueProperty, value);
     }
 
@@ -15,7 +17,7 @@ public class ValueToBoolConverter<T> : ReversibleValueToBoolConverterBase<T, Val
 
     public override T FalseValue
     {
-        get => (T)this.GetValue(FalseValueProperty);
+        get => (T)this.GetValue(FalseValueProperty)!;
         set => this.SetValue(FalseValueProperty, value);
     }
 

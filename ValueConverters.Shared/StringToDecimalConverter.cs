@@ -4,6 +4,8 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public class StringToDecimalConverter : SingletonConverterBase<StringToDecimalConverter>
 {
     private static readonly NumberStyles DefaultNumberStyles = NumberStyles.Any;

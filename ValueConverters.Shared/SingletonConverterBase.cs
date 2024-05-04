@@ -3,6 +3,8 @@ using System.Threading;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public abstract class SingletonConverterBase<TConverter> : ConverterBase
     where TConverter : new()
 {

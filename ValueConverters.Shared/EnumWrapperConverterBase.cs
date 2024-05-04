@@ -8,6 +8,8 @@ using System.Runtime.ExceptionServices;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public abstract class EnumWrapperConverterBase<TConverter> : SingletonConverterBase<TConverter> where TConverter : new()
 {
     public abstract EnumWrapperConverterNameStyle NameStyle { get; set; }
@@ -34,25 +36,25 @@ public abstract class EnumWrapperConverterBase<TConverter> : SingletonConverterB
             if (typeInfo.IsGenericType)
             {
                 var genericType = type.GetGenericArguments()[0];
-                var enumWrapperList = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.CreateMapperList))
-                    .MakeGenericMethod(new[] { genericType })
-                    .Invoke(this, new[] { value, this.NameStyle });
+                var enumWrapperList = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.CreateMapperList))!
+                    .MakeGenericMethod([genericType])
+                    .Invoke(this, [value, this.NameStyle]);
                 return enumWrapperList;
             }
 
             throw new ArgumentException("EnumWrapperConverter cannot convert non-generic IEnumerable. Please bind an IEnumerable<T>.");
         }
 
-        object enumWrapper = null;
+        object enumWrapper = null!;
         try
         {
-            enumWrapper = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.CreateMapper))
-                .MakeGenericMethod(new[] { type })
-                .Invoke(this, new[] { value, this.NameStyle });
+            enumWrapper = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.CreateMapper))!
+                .MakeGenericMethod([type])
+                .Invoke(this, [value, this.NameStyle])!;
         }
         catch (TargetInvocationException ex)
         {
-            ExceptionDispatchInfo.Capture(ex.InnerException).Throw();
+            ExceptionDispatchInfo.Capture(ex.InnerException!).Throw();
         }
 
         return enumWrapper;
@@ -72,7 +74,7 @@ public abstract class EnumWrapperConverterBase<TConverter> : SingletonConverterB
 
         if (IsNullable(targetType))
         {
-            targetType = Nullable.GetUnderlyingType(targetType);
+            targetType = Nullable.GetUnderlyingType(targetType)!;
         }
 
         var type = value.GetType();
@@ -86,16 +88,16 @@ public abstract class EnumWrapperConverterBase<TConverter> : SingletonConverterB
         if (typeInfo.IsGenericType && type.GetGenericTypeDefinition() == typeof(EnumWrapper<>) && type.GetGenericArguments()[0] == targetType)
         {
             // Unpack EnumWrapper<T> if targetType equals T
-            object enumValue = null;
+            object enumValue = null!;
             try
             {
-                enumValue = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.UnpackEnumWrapper))
+                enumValue = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.UnpackEnumWrapper))!
                     .MakeGenericMethod([targetType])
-                    .Invoke(this, [value]);
+                    .Invoke(this, [value])!;
             }
             catch (TargetInvocationException ex)
             {
-                ExceptionDispatchInfo.Capture(ex.InnerException).Throw();
+                ExceptionDispatchInfo.Capture(ex.InnerException!).Throw();
             }
 
             return enumValue;
@@ -110,16 +112,16 @@ public abstract class EnumWrapperConverterBase<TConverter> : SingletonConverterB
         // If value from source (typically a property in a viewmodel)
         // is already EnumWrapper<T>, no further conversion needs to be done.
 
-        object enumWrapper = null;
+        object enumWrapper = null!;
         try
         {
-            enumWrapper = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.ConvertMapper))
+            enumWrapper = typeof(EnumWrapperConverterBase<TConverter>).GetMethod(nameof(this.ConvertMapper))!
                 .MakeGenericMethod([targetType])
-                .Invoke(this, [value]);
+                .Invoke(this, [value])!;
         }
         catch (TargetInvocationException ex)
         {
-            ExceptionDispatchInfo.Capture(ex.InnerException).Throw();
+            ExceptionDispatchInfo.Capture(ex.InnerException!).Throw();
         }
 
         return enumWrapper;

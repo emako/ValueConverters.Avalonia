@@ -3,6 +3,8 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// Converts System.Version objects to string. Parameter can be used to limit the number of Version components to return.
 /// [1] Major Version

@@ -7,6 +7,11 @@ using ValueConverters.Annotations;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+#pragma warning disable CS8600
+#pragma warning disable CS8602
+#pragma warning disable CS8603
+
 public static class EnumWrapper
 {
     /// <summary>
@@ -137,7 +142,7 @@ public class EnumWrapper<TEnumType> : BindableBase, IEquatable<EnumWrapper<TEnum
     /// </summary>
     /// <param name="obj">The object.</param>
     /// <returns>True or false.</returns>
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
         if (ReferenceEquals(null, obj))
         {
@@ -149,7 +154,7 @@ public class EnumWrapper<TEnumType> : BindableBase, IEquatable<EnumWrapper<TEnum
         }
 
         var enumWrapper = obj as EnumWrapper<TEnumType>;
-        if (enumWrapper == null)
+        if (enumWrapper! == null!)
         {
             return false;
         }
@@ -162,7 +167,7 @@ public class EnumWrapper<TEnumType> : BindableBase, IEquatable<EnumWrapper<TEnum
     /// </summary>
     /// <param name="other">The other.</param>
     /// <returns>True or false.</returns>
-    public bool Equals(EnumWrapper<TEnumType> other)
+    public bool Equals(EnumWrapper<TEnumType>? other)
     {
         if (ReferenceEquals(null, other))
         {

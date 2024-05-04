@@ -4,6 +4,8 @@ using Avalonia;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// Checks if the value is between MinValue and MaxValue,
 /// returning true if the value is within the range and false if the value is out of the range.
@@ -16,22 +18,22 @@ public class MinMaxValueToBoolConverter : SingletonConverterBase<MinMaxValueToBo
     public static readonly AvaloniaProperty MaxValueProperty =
         AvaloniaProperty.Register<MinMaxValueToBoolConverter, object>(
             nameof(MaxValue),
-            null);
+            null!);
 
     public static readonly AvaloniaProperty MinValueProperty =
         AvaloniaProperty.Register<MinMaxValueToBoolConverter, object>(
             nameof(MinValue),
-            null);
+            null!);
 
     public object MaxValue
     {
-        get => this.GetValue(MaxValueProperty);
+        get => this.GetValue(MaxValueProperty)!;
         set => this.SetValue(MaxValueProperty, value);
     }
 
     public object MinValue
     {
-        get => this.GetValue(MinValueProperty);
+        get => this.GetValue(MinValueProperty)!;
         set => this.SetValue(MinValueProperty, value);
     }
 

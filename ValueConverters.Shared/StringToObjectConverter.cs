@@ -5,6 +5,8 @@ using Avalonia.Metadata;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// StringToObjectConverter can be used to select different resources based on given string name.
 /// This can be particularly useful if a string key needs to represent an image on the user interface.
@@ -24,7 +26,7 @@ namespace ValueConverters;
 public class StringToObjectConverter : SingletonConverterBase<StringToObjectConverter>
 {
     [Content]
-    public ResourceDictionary Items { get; set; }
+    public ResourceDictionary Items { get; set; } = null!;
 
     protected override object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {

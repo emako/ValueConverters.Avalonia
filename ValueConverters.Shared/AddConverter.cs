@@ -3,6 +3,8 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public class AddConverter : SingletonConverterBase<AddConverter>
 {
     protected override object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)

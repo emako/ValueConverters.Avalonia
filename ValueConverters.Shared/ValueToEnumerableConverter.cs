@@ -3,6 +3,8 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// Converts given value into an IEnumerable containing the value as single object.
 /// This is particularly useful if you have a control which accepts IEnumerable but you only want to bind a single value.

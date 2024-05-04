@@ -3,6 +3,8 @@ using System.Collections.ObjectModel;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// EnumWrapperCollection is an observable collection for enums wrapped in <see cref="EnumWrapper{TEnumType}"/> type.
 /// </summary>

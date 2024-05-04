@@ -4,6 +4,8 @@ using Avalonia;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 [Obsolete("StringLengthToBoolConverter has been renamed to StringIsNotNullOrEmptyConverter. Please use StringIsNotNullOrEmptyConverter. StringLengthToBoolConverter will be removed in future releases.")]
 public class StringLengthToBoolConverter : StringIsNotNullOrEmptyConverter
 {
@@ -25,7 +27,7 @@ public class StringIsNullOrEmptyConverter : SingletonConverterBase<StringIsNotNu
 
     public bool IsInverted
     {
-        get => (bool)this.GetValue(IsInvertedProperty);
+        get => (bool)this.GetValue(IsInvertedProperty)!;
         set => this.SetValue(IsInvertedProperty, value);
     }
 

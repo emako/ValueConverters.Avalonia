@@ -1,8 +1,11 @@
+using System;
+
 namespace ValueConverters;
 
 /// <summary>
 /// Specifies the display state of an element.
 /// </summary>
+[Obsolete("Not supported for Avalonia")]
 public enum Visibility : byte
 {
     /// <summary>

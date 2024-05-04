@@ -3,6 +3,8 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// Changes capitalization of a string.
 /// </summary>

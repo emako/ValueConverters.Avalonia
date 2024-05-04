@@ -4,6 +4,8 @@ using Avalonia;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public abstract class ReversibleValueToBoolConverterBase<T, TConverter> : ValueToBoolConverterBase<T, TConverter>
     where TConverter : new()
 {
@@ -11,7 +13,7 @@ public abstract class ReversibleValueToBoolConverterBase<T, TConverter> : ValueT
 
     public bool BaseOnFalseValue
     {
-        get => (bool)this.GetValue(BaseOnFalseValueProperty);
+        get => (bool)this.GetValue(BaseOnFalseValueProperty)!;
         set => this.SetValue(BaseOnFalseValueProperty, value);
     }
 

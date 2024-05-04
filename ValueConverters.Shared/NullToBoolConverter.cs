@@ -4,6 +4,8 @@ using Avalonia;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 public class NullToBoolConverter : SingletonConverterBase<NullToBoolConverter>
 {
     public static readonly AvaloniaProperty IsInvertedProperty = AvaloniaProperty.Register<NullToBoolConverter, bool>(
@@ -12,7 +14,7 @@ public class NullToBoolConverter : SingletonConverterBase<NullToBoolConverter>
 
     public bool IsInverted
     {
-        get => (bool)this.GetValue(IsInvertedProperty);
+        get => (bool)this.GetValue(IsInvertedProperty)!;
         set => this.SetValue(IsInvertedProperty, value);
     }
 

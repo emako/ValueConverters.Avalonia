@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Globalization;
 
+#pragma warning disable CS1591
+
 namespace ValueConverters;
 
 /// <summary>
@@ -13,12 +15,12 @@ public class EnumToBoolConverter : SingletonConverterBase<EnumToBoolConverter>
     {
         if (parameter is string parameterString)
         {
-            if (Enum.IsDefined(value.GetType(), value) == false)
+            if (Enum.IsDefined(value?.GetType()!, value!) == false)
             {
                 return UnsetValue;
             }
 
-            var parameterValue = Enum.Parse(value.GetType(), parameterString);
+            var parameterValue = Enum.Parse(value?.GetType()!, parameterString);
 
             return parameterValue.Equals(value);
         }

@@ -10,5 +10,5 @@ static class PropertyHelper
         AvaloniaProperty.Register<TParent, T>(name, defaultValue);
 
     public static AvaloniaProperty Create<T, TParent>(string name) where TParent : AvaloniaObject
-        => Create<T, TParent>(name, default);
+        => Create<T, TParent>(name, default!);
 }
