@@ -17,7 +17,7 @@ public class ValueConverterGroup : SingletonConverterBase<ValueConverterGroup>
     [Content]
     public List<IValueConverter> Converters { get; set; } = [];
 
-    protected override object Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
+    protected override object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (this.Converters is IEnumerable<IValueConverter> converters)
         {
@@ -28,7 +28,7 @@ public class ValueConverterGroup : SingletonConverterBase<ValueConverterGroup>
         return UnsetValue;
     }
 
-    protected override object ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
+    protected override object? ConvertBack(object? value, Type targetType, object? parameter, CultureInfo culture)
     {
         if (this.Converters is IEnumerable<IValueConverter> converters)
         {
