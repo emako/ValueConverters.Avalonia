@@ -1,5 +1,4 @@
 ﻿using Avalonia.Metadata;
 
-[assembly: XmlnsPrefix("urn:valueconverters.avalonia", "conv")]
-[assembly: XmlnsDefinition("urn:valueconverters.avalonia", "ValueConverters")]
-[assembly: XmlnsDefinition("urn:valueconverters.avalonia", "ValueConverters.Avalonia")]
+[assembly: XmlnsPrefix("http://schemas.superdev.ch/valueconverters/2016/xaml", "c")]
+[assembly: XmlnsDefinition("http://schemas.superdev.ch/valueconverters/2016/xaml", "ValueConverters")]
