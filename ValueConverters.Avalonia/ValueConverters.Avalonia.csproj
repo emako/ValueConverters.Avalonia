@@ -8,6 +8,7 @@
     <FileVersion>3.0.26.3</FileVersion>
     <Version>$(VersionPrefix)3.0.26.3</Version>
     <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
     <Title>ValueConverters.Avalonia</Title>
     <Description>This library contains a collection of most commonly used implementations of the IValueConverter interface. ValueConverters are used to convert values bound from the view to the view model - and in some cases also backwards.</Description>
     <PackageProjectUrl>https://github.com/emako/ValueConverters.Avalonia</PackageProjectUrl>
