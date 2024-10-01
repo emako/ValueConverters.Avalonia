@@ -4,8 +4,9 @@ using System.Globalization;
 
 namespace ValueConverters;
 
-#pragma warning disable CS1591
-
+/// <summary>
+/// Writes Debuge.WriteLine with value, targetType, parameter and culture.
+/// </summary>
 public class DebugConverter : SingletonConverterBase<DebugConverter>
 {
     protected override object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
