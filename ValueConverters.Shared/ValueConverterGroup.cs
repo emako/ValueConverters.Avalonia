@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using Avalonia;
 using Avalonia.Data.Converters;
 using Avalonia.Metadata;
 
 namespace ValueConverters;
-
-#pragma warning disable CS1591
 
 /// <summary>
 /// Value converters which aggregates the results of a sequence of converters: Converter1 >> Converter2 >> Converter3
@@ -35,7 +32,7 @@ public class ValueConverterGroup : SingletonConverterBase<ValueConverterGroup>
         if (this.Converters is IEnumerable<IValueConverter> converters)
         {
             var language = culture;
-            return converters.Reverse<IValueConverter>().Aggregate(value, (current, converter) => converter.Convert(current, targetType, parameter, language));
+            return converters.Reverse().Aggregate(value, (current, converter) => converter.ConvertBack(current, targetType, parameter, language));
         }
 
         return UnsetValue;
