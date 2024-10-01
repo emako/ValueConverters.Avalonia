@@ -3,10 +3,10 @@
   <PropertyGroup>
     <TargetFrameworks>net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <AssemblyName>ValueConverters.Avalonia</AssemblyName>
-    <PackageVersion>3.0.26.3</PackageVersion>
-    <AssemblyVersion>3.0.26.3</AssemblyVersion>
-    <FileVersion>3.0.26.3</FileVersion>
-    <Version>$(VersionPrefix)3.0.26.3</Version>
+    <PackageVersion>3.1.22.0</PackageVersion>
+    <AssemblyVersion>3.1.22.0</AssemblyVersion>
+    <FileVersion>3.1.22.0</FileVersion>
+    <Version>$(VersionPrefix)3.1.22.0</Version>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
     <Title>ValueConverters.Avalonia</Title>
