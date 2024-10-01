@@ -11,7 +11,7 @@ public abstract class BindableBase : INotifyPropertyChanged
 {
     public event PropertyChangedEventHandler? PropertyChanged;
 
-    protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+    protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string? propertyName = null)
     {
         if (EqualityComparer<T>.Default.Equals(storage, value))
         {
@@ -24,7 +24,7 @@ public abstract class BindableBase : INotifyPropertyChanged
         return true;
     }
 
-    protected virtual bool SetProperty<T>(ref T storage, T value, Action onChanged, [CallerMemberName] string propertyName = null)
+    protected virtual bool SetProperty<T>(ref T storage, T value, Action onChanged, [CallerMemberName] string? propertyName = null)
     {
         if (EqualityComparer<T>.Default.Equals(storage, value))
         {
@@ -38,7 +38,7 @@ public abstract class BindableBase : INotifyPropertyChanged
         return true;
     }
 
-    protected void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+    protected void RaisePropertyChanged([CallerMemberName] string? propertyName = null)
     {
         this.OnPropertyChanged(new PropertyChangedEventArgs(propertyName));
     }

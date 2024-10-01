@@ -7,6 +7,8 @@ using Avalonia.Metadata;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1591
+
 /// <summary>
 /// Value converters which aggregates the results of a sequence of converters: Converter1 >> Converter2 >> Converter3
 /// The output of converter N becomes the input of converter N+1.

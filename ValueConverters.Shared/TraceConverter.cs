@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.Globalization;
 
+#pragma warning disable CS1591
+
 namespace ValueConverters;
 
 /// <summary>

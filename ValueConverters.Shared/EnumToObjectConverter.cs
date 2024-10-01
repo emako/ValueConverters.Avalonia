@@ -3,6 +3,7 @@ using System.Globalization;
 
 namespace ValueConverters;
 
+#pragma warning disable CS1570
 #pragma warning disable CS1591
 
 /// <summary>

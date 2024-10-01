@@ -2,6 +2,12 @@ using System;
 using System.Linq;
 using System.Reflection;
 
+#pragma warning disable CS1591
+#pragma warning disable CS8600
+#pragma warning disable CS8602
+#pragma warning disable CS8603
+#pragma warning disable CS8618
+
 namespace ValueConverters.Annotations;
 
 /// <summary>
