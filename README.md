@@ -1,5 +1,5 @@
 # ValueConverters.NET 
-[![Version](https://img.shields.io/nuget/v/ValueConverters.svg)](https://www.nuget.org/packages/ValueConverters.Avalonia)  [![Downloads](https://img.shields.io/nuget/dt/ValueConverters.svg)](https://www.nuget.org/packages/ValueConverters.Avalonia)
+[![Version](https://img.shields.io/nuget/v/ValueConverters.Avalonia.svg)](https://www.nuget.org/packages/ValueConverters.Avalonia)  [![Downloads](https://img.shields.io/nuget/dt/ValueConverters.Avalonia.svg)](https://www.nuget.org/packages/ValueConverters.Avalonia)
 
 An Avalonia library ported from [ValueConverters.NET](https://github.com/thomasgalliker/ValueConverters.NET).
 
